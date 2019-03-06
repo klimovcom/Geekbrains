@@ -2,6 +2,8 @@
 	$h1 = "minimalistica";
 	$title = "minimalistica";
 	$year = date("Y");
+
+	$menu = ["home", "archive", "contact"];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,9 +18,11 @@
 		<h1><?php echo $h1 . "&nbsp;" . $year; ?></h1>
 		
 		<ul id="menu">
-			<li><a href="#">home</a></li>
-			<li><a href="#">archive</a></li>
-			<li><a href="#">contact</a></li>
+			<?
+				foreach ($menu as $key => $value) {
+					echo "<li><a href='#'>$value</a></li>";
+				}
+			?>
 		</ul>
 	
 		<div class="post">
